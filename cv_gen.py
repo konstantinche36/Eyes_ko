@@ -17,6 +17,7 @@ def set_pos_coors(start_x_pos, start_y_pos, end_x_pos, end_y_pos):
 
 def get_shoot():
     # screen_img = np.array(ImageGrab.grab(bbox=(start_x_pos, start_y_pos, end_x_pos, end_y_pos)))
+    print((START_X_POS, START_Y_POS, END_X_POS, END_Y_POS))
     mat1 = np.array(ImageGrab.grab(bbox=(START_X_POS, START_Y_POS, END_X_POS, END_Y_POS)))
     return mat1
     # cv.imshow('screen', screen_img)
@@ -25,6 +26,7 @@ def get_shoot():
 
 def show_screen(mat):
     cv.imshow('screen', mat)
+    cv.waitKey()
 
 
 def get_cur_shoot(start_x_pos, start_y_pos, end_x_pos, end_y_pos):
